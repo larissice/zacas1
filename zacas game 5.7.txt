@@ -1,0 +1,734 @@
+Algoritmo "zacas"
+//By: Larissice
+//Enjoy the game ;D
+var
+opcao, senha, i, n, y, bye: caractere
+inicio
+//interface chatbot
+escreval ("=================================================")
+escreval ("    +   _       .     ¨ _  : _  +      .     _  :")
+escreval (" .____ | |  +   __ _  _| |_ | |__ :  ___ + _| |_ ")
+escreval (" /  __|| |___  / _` ||_   _||  _ \  / _ \ |_   _|")
+escreval ("|  (__ |  _  || (_| |  | |  | |_) || (_) |  | |  ")
+escreval ("+\____||_| |_| \__,_|+ |_| .|____/¨ \___/ + |_| .")
+escreval ("  .    +  :       ..         +     .     ..      ")
+escreval ("=================================================")
+//chatbot saudações Lia
+escreval ("________________________________")
+escreval ("\ Hello stranger! Eu sou Lia.   |")
+escreval (" |Qual o seu nome?              |")
+escreval (" |______________________________|")
+leia (n)
+
+escreval ("________________________________")
+escreval ("\ Olá,", n,"                    |")
+escreval (" |você gosta de desafios?       |")
+escreval (" |______________________________|")
+leia (i)
+//sair
+se (i = "sair") entao
+interrompa
+fimse
+//fimsair
+escreval ("________________________________")
+escreval ("\ Pois eu tenho um              |")
+escreval (" |desafio para você.            |")
+escreval (" |______________________________|")
+//ask desafio
+repita
+escreval ("________________________________")
+escreval ("\ Aceita o desafio?             |")
+escreval (" |______________________________|")
+leia (opcao)
+            //sair
+            se (opcao = "sair") entao
+            interrompa
+            fimse
+            //fimsair
+     se (opcao = "sim") entao
+     escreval ("_____________________________________")
+     escreval ("\ Wow! Aceitou rápido.               |")
+     escreval (" |Comece tentando descobrir a senha. |")
+     escreval (" |___________________________________|")
+     fimse
+          se (compr(opcao)>8) entao
+          escreval ("____________________________________________________")
+          escreval ("\ Calma, eu não fui programada para palavras grandes|")
+          escreval (" |Deixa eu analisar no meu banco de dados...        |")
+          escreval (" |__________________________________________________|")
+          fimse
+             se (opcao = "não") ou (opcao = "nao") entao
+             escreval ("________________________________")
+             escreval ("\ Nem queria mesmo.             |")
+             escreval (" |______________________________|")
+             interrompa
+             fimse
+                     se (opcao <> "sim") e (opcao <> "não") entao
+                     escreval ("________________________________________")
+                     escreval ("\ Olha, analisei aqui e ´´",opcao,"´´   |")
+                     escreval (" |não é uma resposta válida.            |")
+                     escreval (" |Deixe para bugar o código depois, ok? |")
+                     escreval (" |______________________________________|")
+                     leia (i)
+                     escreval ("________________________________")
+                     escreval ("\ Ok, tudo bem...               |")
+                     escreval (" |______________________________|")
+                              se (opcao = "sair") entao
+                              interrompa
+                              fimse
+                     fimse
+                          se (opcao = "banana") ou (opcao = "uva") ou (opcao = "maçã") ou (opcao = "laranja") ou (opcao = "limão") ou (opcao = "pêra") ou (opcao = "melancia") ou (opcao = "morango") ou (opcao = "abacai") entao
+                          escreval ("__________________________________")
+                          escreval ("\",opcao, " é uma fruta muito boa.|")
+                          escreval (" |Mas não serve como resposta.    |")
+                          escreval (" |________________________________|")
+                          fimse
+                               se (opcao = "azul") ou (opcao = "verde") ou (opcao = "amarelo") ou (opcao = "vermelho") ou (opcao = "rosa") ou (opcao = "preto") entao
+                               escreval ("___________________________________")
+                               escreval ("\",opcao, " é uma cor muito bonita.|")
+                               escreval (" |_________________________________|")
+                               fimse
+ate opcao = "sim"
+//
+//insira senha
+senha <- ""
+enquanto (senha <> "zacas") faca
+escreva ("Digite a senha:")
+leia (senha)
+     se (senha = "dica") entao
+     escreval ("_________________________________")
+     escreval ("\ ",n,", quer ajuda?             |")
+     escreval (" |Dica: a senha tem 5 caracteres.|")
+     escreval (" |_______________________________|")
+     leia (senha)
+     fimse
+          se (senha = "dica 2") entao
+          escreval ("_________________________________")
+          escreval ("\ Ok, ",n,".                     |")
+          escreval (" |A senha é zacas                |")
+          escreval (" |_______________________________|")
+          leia (senha)
+          fimse
+               se (senha = "sair") entao
+               interrompa
+               fimse
+                    se (senha = "zacas") entao
+                    escreval ("________________________________")
+                    escreval ("\ Eureka!                       |")
+                    escreval (" |Pronto para o jogo, ",n,"?    |")
+                    escreval (" |______________________________|")
+                    leia (i)
+                    fimse
+                         se (senha <> "zacas") ou (senha <> "dica") ou (senha <> "dica 2") ou (senha <> "sair") entao
+                         escreval ("SENHA INCORRETA.")
+                         escreval ("TENTE NOVAMENTE.")
+                         fimse
+fimenquanto
+limpatela
+//saudações
+//entrando no jogo: saudações e instruções
+escreval ("===================================")
+escreval (" .  +    ¨ .      +   ¨¨   . . +   ")
+escreval (" ___  . __ _ + __ _ . __ _  ___  . ")
+escreval ("|_  /  / _` | /  __| / _` |/ __|.  ")
+escreval (" / /_ | (_| ||  (__ | (_| |\__ \ + ")
+escreval ("/____| \__,_| \____| \__,_||___/  .")
+escreval (" +    .   ¨  +      .           +  ")
+Escreval ("B e m  v i n d o  a o  Z a c a s! .")
+escreval (" .    +      ¨   :   +    .   ¨ .  ")
+escreval ("===================================")
+
+Escreval ("Este jogo é cheio de referências e")
+escreval ("easter eggs, consegue encontrá-los?")
+
+escreval ("===================================")
+escreval ("Regras:")
+escreval ("1. Não há regras")
+escreval ("Dê enter para começar.")
+escreval ("Digite sair a qualquer momento para sair")
+leia (i)
+se (i <> 0) entao
+limpatela
+fimse
+      se (i = "sair") entao
+      interrompa
+      fimse
+//
+//"que comecem os jogos"
+escreval ("________________________________")
+escreval ("\ Que comecem os jogos          |")
+escreval (" |______________________________|")
+leia (i)
+//instruções
+escreval ("Instruções (LEIA)")
+escreval ("______________________________________________________")
+escreval ("1. O jogo possui 10 levels")
+escreval ("2. Você pode sair a qualquer momento")
+escreval ("digitando sair.")
+escreval ("3. Vc pode pedir dicas digitando dica e, quando")
+escreval ("disponível, dica 2.")
+escreval ("4. Vc pode conseguir dicas extras com os easter eggs.")
+escreval ("5. Digite suas respostas com letras minúsculas.")
+escreval ("______________________________________________________")
+escreval ("Dê enter para começar.")
+leia (y)
+      se (y = "sair") entao
+      interrompa
+      fimse
+se (y <> 0) entao
+limpatela
+fimse
+//
+
+//fase1
+repita
+      escreval ("Level 1")
+      escreval ("Deseja sair ou continuar?")
+      leia (bye)
+      se (bye = "sair") entao
+      interrompa
+      senao
+      limpatela
+      fimse
+escreval ("Level 1")
+escreval ("Sucrilhos assassino")
+leia (i)
+     se (i = "cereal killer") entao
+     escreval ("________________________________")
+     escreval ("\ Vc matou a charada, ",n,".    |")
+     escreval (" |Next level...                 |")
+     escreval (" |______________________________|")
+     leia (y)
+     fimse
+          se (i = "sair") entao
+          interrompa
+          fimse
+                    se (i <> "cereal killer") e (i <> "sair") e (i <> "dica") entao
+                    escreval ("Resposta errada.")
+                    escreval ("________________________________")
+                    escreval ("\ Tente novamente, ",n,".       |")
+                    escreval (" |Vc consegue.                  |")
+                    escreval (" |______________________________|")
+                    leia (i)
+                    fimse
+                         se (i = "dica") entao
+                         escreval ("________________")
+                         escreval ("\ 2 palavras    |")
+                         escreval (" |______________|")
+                         leia (i)
+                              escreval ("________________________________")
+                              escreval ("\ Vc matou a charada, ",n,".    |")
+                              escreval (" |Next level...                 |")
+                              escreval (" |______________________________|")
+                              leia (y)
+                         fimse
+
+ate i = "cereal killer"
+limpatela
+//
+//fase 2
+escreval ("Sair ou continuar?")
+leia (bye)
+se (bye = "sair") entao
+interrompa
+fimse
+
+repita
+escreval ("Level 2")
+escreval ("B - A - N - A - M - T")
+leia (i)
+     se(i = "batman") entao
+     escreval ("________________________________")
+     escreval ("\ Pq será que nunca vi você     |")
+     escreval (" |e o Batman no mesmo lugar?    |")
+     escreval (" |______________________________|")
+     leia (y)
+     fimse
+          se (i = "sair") entao
+          interrompa
+          fimse
+               se (i <> "batman") e (i <> "sair") e (i <> "dica") entao
+               escreval ("Resposta errada.")
+               escreval ("________________________________")
+               escreval ("\ tá morcegando, ",n,"?         |")
+               escreval (" |______________________________|")
+               leia (i)
+               fimse
+                     se (i = "dica") entao
+                     escreval ("___________________")
+                     escreval ("\ Homen morcego    |")
+                     escreval (" |_________________|")
+                     leia (i)
+                     escreval ("________________________________")
+                     escreval ("\ Pq será que nunca vi você     |")
+                     escreval (" |e o Batman no mesmo lugar?    |")
+                     escreval (" |______________________________|")
+                     leia (y)
+                     fimse
+ate i = "batman"
+limpatela
+//
+//fase 3
+escreval ("Sair ou continuar?")
+leia (bye)
+se (bye = "sair") entao
+interrompa
+fimse
+
+repita
+escreval ("Level 3")
+escreval ("Qual o sentido da vida?")
+leia (i)
+     se(i = "42") entao
+     escreval ("________________________________")
+     escreval ("\ Até mais e obrigado pelos     |")
+     escreval (" |peixes!                       |")
+     escreval (" |______________________________|")
+     leia (y)
+     fimse
+          se (i = "sair") entao
+          interrompa
+          fimse
+              se (i = "não tem") entao
+              escreval ("Resposta errada.")
+              escreval ("________________________________")
+              escreval ("\ Mas é claro q tem, ",n,".     |")
+              escreval (" |Keep trying.                  |")
+              escreval (" |______________________________|")
+              leia (i)
+              fimse
+                      se (i <> "42") e (i <> "sair") e (i <> "dica") entao
+                      escreval ("Resposta errada.")
+                      escreval ("________________________________")
+                      escreval ("\ Que pena, mochileiro!         |")
+                      escreval (" |______________________________|")
+                      leia (i)
+                      fimse
+                                 se (i = "dica") entao
+                                 escreval ("________")
+                                 escreval ("\  XLII |")
+                                 escreval (" |______|")
+                                 leia (i)
+                                 escreval ("________________________________")
+                                 escreval ("\ Até mais e obrigado pelos     |")
+                                 escreval (" |peixes!                       |")
+                                 escreval (" |______________________________|")
+                                 leia (y)
+                                 fimse
+ate i = "42"
+limpatela
+//
+//fase 4
+escreval ("Sair ou continuar?")
+leia (bye)
+se (bye = "sair") entao
+interrompa
+fimse
+
+repita
+escreval ("Level 4")
+escreval ("000000000000000000000000000000000000")
+escreval ("000000000000000000000000000000000000")
+escreval ("0000000000000000000000O0000000000000")
+escreval ("000000000000000000000000000000000000")
+leia (i)
+     se(i = "o") entao
+     escreval ("Parabéns! Next level...")
+     escreval ("________________________________")
+     escreval ("\ Wow! Eu sou feita de 0s e 1s  |")
+     escreval (" |e não encontrei esse ´´o``.   |")
+     escreval (" |______________________________|")
+     leia (y)
+     fimse
+          se (i = "sair") entao
+          interrompa
+          fimse
+               se (i <> "o") e (i <> "sair") e (i <> "dica") entao
+               escreval ("RESPOSTA ERRADA")
+               escreval ("________________________________")
+               escreval ("\ Ache o erro.                  |")
+               escreval (" |Algumas coisas são mestres na |")
+               escreval (" |arte da camuflagem.           |")
+               escreval (" |______________________________|")
+               leia (i)
+               fimse
+                    se (i = "binário") entao
+                    escreval ("_________________________________")
+                    escreval ("\  01010101010101010101010101010 |")
+                    escreval (" | 0101010Tente novamente1001010 |")
+                    escreval (" | 10100100101010101010010101010 |")
+                    escreval (" |_______________________________|")
+                    leia (i)
+                    fimse
+                             se (i = "dica") entao
+                             escreval ("__________________________")
+                             escreval ("\ 15ª letra do alfabeto   |")
+                             escreval (" |________________________|")
+                             leia (i)
+                             escreval ("________________________________")
+                             escreval ("\ Wow! Eu sou feita de 0s e 1s  |")
+                             escreval (" |e não encontrei esse ´´o``.   |")
+                             escreval (" |______________________________|")
+                             leia (y)
+                             fimse
+ate i = "o"
+limpatela
+//
+//fase 5
+escreval ("Sair ou continuar?")
+leia (bye)
+se (bye = "sair") entao
+interrompa
+fimse
+
+repita
+escreval ("Level 5")
+escreval ("Secrets I have held in my heart")
+escreval ("Are harder to hide than I thought")
+escreval ("Maybe I just wanna be yours")
+leia (i)
+     se(i = "arctic monkeys") entao
+     escreval ("________________________________")
+     escreval ("\ Você ouve indie, ",n,"?       |")
+     escreval (" |Gostei de você.               |")
+     escreval (" |______________________________|")
+     leia (y)
+     fimse
+          se (i = "sair") entao
+          interrompa
+          fimse
+               se (i <> "arctic monkeys") e (i <> "sair") e (i <> "dica") entao
+               escreval ("RESPOSTA ERRADA")
+               escreval ("________________________________")
+               escreval ("\ Que tal passar um tempinho    |")
+               escreval (" |no ártico vendo macacos?      |")
+               escreval (" |______________________________|")
+               leia (i)
+               fimse
+                    se (i = "dica") entao
+                    escreval ("__________________________")
+                    escreval ("\ Macacos do ártico       |")
+                    escreval (" |________________________|")
+                    leia (i)
+                     escreval ("________________________________")
+                     escreval ("\ Você ouve indie, ",n,"?       |")
+                     escreval (" |Gostei de você.               |")
+                     escreval (" |______________________________|")
+                     leia (y)
+                    fimse
+ate i = "arctic monkeys"
+limpatela
+
+//fase 6
+escreval ("Sair ou continuar?")
+leia (bye)
+se (bye = "sair") entao
+interrompa
+fimse
+
+repita
+escreval ("Level 6")
+escreval ("Paralelepípedo")
+leia (i)
+     se(i = "14") entao
+     escreval ("Parabéns! Next level...")
+     escreval ("_________________________________")
+     escreval ("\ Você é bom nisso, ",n,".       |")
+     escreval (" |Agora faltam mais 4 fases.     |")
+     escreval (" |_______________________________|")
+     leia (y)
+     fimse
+         se (i = "sair") entao
+         interrompa
+         fimse
+          se (i <> "14") e (i <> "sair") e (i <> "dica") entao
+          escreval ("RESPOSTA ERRADA.")
+          escreval ("_________________________________")
+          escreval ("\ Pense mais um pouco            |")
+          escreval (" |_______________________________|")
+          leia (i)
+          fimse
+               se (i = "dica") entao
+               escreval ("_________________________________")
+               escreval ("\ P-a-r-a-l-e-l-e-p-i-p-e-d-o    |")
+               escreval (" |Quantas letras hein!!!!        |")
+               escreval (" |_______________________________|")
+               leia (i)
+               escreval ("_________________________________")
+               escreval ("\ Você é bom nisso, ",n,".       |")
+               escreval (" |Agora faltam mais 4 fases.     |")
+               escreval (" |_______________________________|")
+               leia (y)
+               fimse
+ate i = "14"
+limpatela
+
+//fase 7
+escreval ("Sair ou continuar?")
+leia (bye)
+se (bye = "sair") entao
+interrompa
+fimse
+
+repita
+escreval ("Level 7")
+escreval ("Eu sou seu pai")
+leia (i)
+     se(i = "darth vader") entao
+     escreval ("________________________________")
+     escreval ("\ Que a força esteja com você   |")
+     escreval (" |______________________________|")
+     leia (y)
+     fimse
+      se (i = "sair") entao
+      interrompa
+      fimse
+          se (i <> "darth vader") e (i <> "sair") e (i <> "dica") entao
+          escreval ("Resposta errada.")
+          escreval ("_________________________________")
+          escreval ("\ Tam tam tam tam tam tam tam tam|")
+          escreval (" |tam tam tam tam tam tam tam tam|")
+          escreval (" |_______________________________|")
+          leia (i)
+          fimse
+               se (i = "dica") entao
+               escreval ("_________________________________")
+               escreval ("\ Anakin Skywalker               |")
+               escreval (" |_______________________________|")
+               leia (i)
+               escreval ("________________________________")
+               escreval ("\ Que a força esteja com você   |")
+               escreval (" |______________________________|")
+               leia (y)
+               fimse
+ate i = "darth vader"
+limpatela
+//
+//fase 8
+escreval ("Sair ou continuar?")
+leia (bye)
+se (bye = "sair") entao
+interrompa
+fimse
+
+repita
+escreval ("Level 8")
+escreval ("Coelhinho da páscoa, o que trazes pra mim?")
+escreval ("O fim do mundo")
+leia (i)
+     se (i = "28:06:42:12") entao
+     escreval ("________________________________")
+     escreval ("\ Parabéns!                     |")
+     escreval (" |Pronto pro próximo nível?     |")
+     escreval (" |______________________________|")
+     leia (y)
+     fimse
+       se (i = "sair") entao
+       interrompa
+       fimse
+               se (i = "donnie darko") entao
+               escreval ("___________________________________")
+               escreval ("\ Faltam exatamente 28 dias,       |")
+               escreval (" |6 horas, 42 minutos e 12 segundos|")
+               escreval (" |para o mundo acabar.             |")
+               escreval (" |_________________________________|")
+               leia (i)
+               fimse
+                    se (i = "dica") entao
+                    escreval ("_________________________________")
+                    escreval ("\ Tempo se conta assim:          |")
+                    escreval (" |12:57:00:45                    |")
+                    escreval (" |_______________________________|")
+                    leia (i)
+                    escreval ("________________________________")
+                    escreval ("\ Parabéns!                     |")
+                    escreval (" |Pronto pro próximo nível?     |")
+                    escreval (" |______________________________|")
+                    leia (y)
+                    fimse
+                              se (i <> "28:06:42:12") e (i <> "sair") e (i <> "dica") entao
+                              escreval ("RESPOSTA ERRADA.")
+                              escreval ("________________________________")
+                              escreval ("\ Ok, aqui vai uma dica:        |")
+                              escreval (" |Filme Donnie Darko.           |")
+                              escreval (" |______________________________|")
+                              leia (i)
+                              fimse
+
+ate i = "28:06:42:12"
+limpatela
+//
+//fase 9
+escreval ("Sair ou continuar?")
+leia (bye)
+se (bye = "sair") entao
+interrompa
+fimse
+
+repita
+escreval ("Level 9")
+escreval ("2 boys were playing a game,")
+escreval ("then one said to other:")
+escreval ("´´Alex, its your turn``")
+leia (i)
+     se(i = "alex turner") entao
+     escreval ("________________________________")
+     escreval ("\ Você gosta muito de Arctic    |")
+     escreval (" |Monkeys, ",n,".               |")
+     escreval (" |______________________________|")
+     leia (y)
+     fimse
+         se (i = "sair") entao
+         interrompa
+         fimse
+          se (i = "ok") entao
+          escreval ("__________")
+          escreval ("\ Ok?     |")
+          escreval (" |Ok.     |")
+          escreval (" |________|")
+          leia (i)
+          fimse
+               se (i <> "alex turner") e (i <> "sair") e (i <> "dica") entao
+               escreval ("Resposta errada.")
+               escreval ("________________________________")
+               escreval ("\ É trocadilho.                 |")
+               escreval (" |Você é bom em trocadilhos?    |")
+               escreval (" |______________________________|")
+               leia (i)
+               fimse
+                    se (i = "dica") entao
+                    escreval ("_________________________________")
+                    escreval ("\ Arctic Monkeys                 |")
+                    escreval (" |Vocalista?                     |")
+                    escreval (" |_______________________________|")
+                    leia (i)
+                    escreval ("________________________________")
+                    escreval ("\ Você gosta muito de Arctic    |")
+                    escreval (" |Monkeys, ",n,".               |")
+                    escreval (" |______________________________|")
+                    leia (y)
+                    fimse
+ate i = "alex turner"
+limpatela
+//
+//fase 10
+repita
+      escreval ("Sair ou continuar?")
+      leia (bye)
+      se (bye = "sair") entao
+      interrompa
+      senao
+      limpatela
+fimse
+escreval ("Level 10")
+escreval ("28:06:42:12")
+leia (i)
+se(i = "turbina") entao
+escreval ("________________________________")
+escreval ("\ Ufa! Vc salvou o mundo, ",n,".|")
+escreval (" |______________________________|")
+leia (y)
+fimse
+     se (i = "sair") entao
+     interrompa
+     fimse
+          se (i = "donnie darko") entao
+          escreval ("___________________________________")
+          escreval ("\ Faltam exatamente 20 e 8 dias,   |")
+          escreval (" |6 horas, 42 minutos e 12 segundos|")
+          escreval (" |para o mundo acabar.             |")
+          escreval (" |_________________________________|")
+          escreval ("______________________________________")
+          escreval ("\ O coelho está na sua frente         |")
+          escreval (" |e algo está onde não deveria estar. |")
+          escreval (" |O que você tem que mandar pro lugar?|")
+          escreval (" |____________________________________|")
+          leia (i)
+          escreval ("________________________________")
+          escreval ("\ Ufa! Vc salvou o mundo, ",n,".|")
+          escreval (" |______________________________|")
+          leia (y)
+          fimse
+               se (i = "frank") entao
+               escreval ("__________________________________")
+               escreval ("\ O tempo está correndo.          |")
+               escreval (" |Algo vai cair e não é um coelho.|")
+               escreval (" |________________________________|")
+               leia (i)
+               fimse
+                    se (i <> "donnie darko") e (i <> "turbina") e (i <> "frank") e (i <> "dica") entao
+                    escreval ("________________________________")
+                    escreval ("\ NÃAAAAAAAAAAAOOOOO!           |")
+                    escreval (" |O tempo está passando!!!!!!!  |")
+                    escreval (" |______________________________|")
+                    escreval ("________________________________")
+                    escreval ("\ Acho que algo saiu do universo|")
+                    escreval (" |primário e caiu no tangente.  |")
+                    escreval (" |______________________________|")
+                    leia (i)
+                    fimse
+                         se (i = "28 dias, 6 horas, 42 minutos e 12 segundos para o mundo acabar") entao
+                         escreval ("________________________________")
+                         escreval ("\ O mundo está acabando e vc    |")
+                         escreval (" |vai fazer o q?                |")
+                         escreval (" |______________________________|")
+                         leia (i)
+                         fimse
+                            se (i = "dica") entao
+                            escreval ("_____________________________________")
+                            escreval ("\ Capta e converte a energia mecânica|")
+                            escreval (" |e térmica contida em um fluido em  |")
+                            escreval (" |trabalho de eixo.                  |")
+                            escreval (" |___________________________________|")
+                            leia (i)
+                            escreval ("________________________________")
+                            escreval ("\ Ufa! Vc salvou o mundo, ",n,".|")
+                            escreval (" |______________________________|")
+                            leia (y)
+                            fimse
+                         se (i = "fim do mundo") entao
+                         escreval ("________________________________")
+                         escreval ("\ Toda criatura morre sozinha.  |")
+                         escreval (" |Donnie, acorde!               |")
+                         escreval (" |______________________________|")
+                         leia (i)
+                         fimse
+                              se (i = "A data do fim do mundo") entao
+                              escreval ("________________________________")
+                              escreval ("\ Vai ser hoje se você          |")
+                              escreval (" |não acertar, ",n,".           |")
+                              escreval (" |______________________________|")
+                              leia (i)
+                              fimse
+                                   se (i = "quando a turbina do avião cai no quarto e mata o donnie darko") ou (i = "morte donnie darko") ou (i = "turbina cai no donnie") entao
+                                   escreval ("________________________________")
+                                   escreval ("\ O que matou ele?              |")
+                                   escreval (" |______________________________|")
+                                   leia (i)
+                                   fimse
+                                        se (i = "dica 2") entao
+                                        escreval ("________________________________")
+                                        escreval ("\ O que matou Donnie Darko?     |")
+                                        escreval (" |______________________________|")
+                                        leia (i)
+                                        escreval ("________________________________")
+                                        escreval ("\ Ufa! Vc salvou o mundo, ",n,".|")
+                                        escreval (" |______________________________|")
+                                        leia (y)
+                                        fimse
+
+                    
+ate i = "turbina"
+limpatela
+//saudações finais Lia
+escreval ("________________________________")
+escreval ("\ Parabéns, ", n, "! Vc         |")
+escreval (" |chegou ao fim do desafio.     |")
+escreval (" |______________________________|")
+escreval ("________________________________")
+escreval ("\  Bye stranger!                |")
+escreval (" | Até o próximo jogo.          |")
+escreval (" |______________________________|")
+leia (y)
+
+fimalgoritmo
